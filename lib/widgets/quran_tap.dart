@@ -37,27 +37,19 @@ class _QuranTapState extends State<QuranTap> {
   }
 
   Future<void> loadMostRecent() async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final savedMostRecent = prefs.getStringList('mostRecent') ?? [];
-      final loaded = <MostRecentModel>[];
+    final prefs = await SharedPreferences.getInstance();
+    final savedMostRecent = prefs.getStringList('mostRecent') ?? [];
+    final loaded = <MostRecentModel>[];
 
-      for (final item in savedMostRecent) {
-        try {
-          final decoded = jsonDecode(item);
-          if (decoded is Map<String, dynamic>) {
-            loaded.add(MostRecentModel.fromMap(decoded));
-          }
-        } catch (_) {
-          // ignore corrupted saved data
-        }
+    for (final item in savedMostRecent) {
+      final decoded = jsonDecode(item);
+      if (decoded is Map<String, dynamic>) {
+        loaded.add(MostRecentModel.fromMap(decoded));
       }
-
-      mostRecent = loaded;
-      if (mounted) setState(() {});
-    } catch (_) {
-      if (mounted) setState(() {});
     }
+
+    mostRecent = loaded;
+    if (mounted) setState(() {});
   }
 
   Future<void> addToMostRecent(
@@ -66,32 +58,28 @@ class _QuranTapState extends State<QuranTap> {
     int surahNum,
     String surahEnglish,
   ) async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
+    final prefs = await SharedPreferences.getInstance();
 
-      final newSurah = MostRecentModel(
-        text: text,
-        ayatNum: ayatNum,
-        surahNum: surahNum,
-        surahEnglish: surahEnglish,
-      );
+    final newSurah = MostRecentModel(
+      text: text,
+      ayatNum: ayatNum,
+      surahNum: surahNum,
+      surahEnglish: surahEnglish,
+    );
 
-      mostRecent.removeWhere((item) => item.surahNum == surahNum);
-      mostRecent.insert(0, newSurah);
+    mostRecent.removeWhere((item) => item.surahNum == surahNum);
+    mostRecent.insert(0, newSurah);
 
-      if (mostRecent.length > 10) {
-        mostRecent = mostRecent.take(10).toList();
-      }
-
-      final savedMostRecent =
-          mostRecent.map((item) => jsonEncode(item.toMap())).toList();
-
-      await prefs.setStringList('mostRecent', savedMostRecent);
-
-      if (mounted) setState(() {});
-    } catch (_) {
-      // prevent save errors from blocking screen navigation
+    if (mostRecent.length > 10) {
+      mostRecent = mostRecent.take(10).toList();
     }
+
+    final savedMostRecent =
+        mostRecent.map((item) => jsonEncode(item.toMap())).toList();
+
+    await prefs.setStringList('mostRecent', savedMostRecent);
+
+    if (mounted) setState(() {});
   }
 
   @override
@@ -241,7 +229,6 @@ class _QuranTapState extends State<QuranTap> {
                       int.parse(
                         widget.surahAyatNums[surahIndex].split(' ').first,
                       ),
-
                       widget.surahNums[surahIndex],
                       widget.surahNamesEnglish[surahIndex],
                     );

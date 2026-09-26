@@ -22,10 +22,10 @@ class MostRecentModel {
 
   factory MostRecentModel.fromMap(Map<String, dynamic> map) {
     return MostRecentModel(
-      text: map['text'] as String,
-      ayatNum: map['ayatNum'] as int,
-      surahNum: map['surahNum'] as int,
-      surahEnglish: map['surahEnglish'] as String,
+      text: map['text'],
+      ayatNum: map['ayatNum'],
+      surahNum: map['surahNum'],
+      surahEnglish: map['surahEnglish'],
     );
   }
 }
