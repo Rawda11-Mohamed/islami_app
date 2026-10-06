@@ -111,6 +111,7 @@ class OnboardingState extends State<Onboarding> {
                       ),
                     ),
                   ),
+                  Spacer(),
                   TextButton(
                     onPressed:
                         currentIndex == pages.length - 1

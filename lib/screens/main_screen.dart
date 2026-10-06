@@ -407,6 +407,7 @@ class _MainScreenState extends State<MainScreen> {
         type: BottomNavigationBarType.fixed,
         backgroundColor: AppColors.primary,
         selectedLabelStyle: TextStyle(color: Colors.white),
+        selectedItemColor: AppColors.white,
         onTap: (index) {
           setState(() {
             currentIndex = index;
