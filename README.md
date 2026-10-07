@@ -1,4 +1,4 @@
-# Islamic App
+# Islami App
 
 ## Overview
 
@@ -40,7 +40,6 @@ The application provides a collection of Hadith that users can browse and read.
 
 An electronic Sebha feature allows users to count their Tasbeeh digitally.
 
-
 ### Prayer Times
 
 The application provides prayer time information to help users keep track of their daily prayers.
@@ -73,8 +72,6 @@ The application provides prayer time information to help users keep track of the
 * Quran Text Files
 * Hadith Text Files
 
-
-
 ---
 
 ## Quran Reading
@@ -103,46 +100,73 @@ This allows the application to remember the user's recent reading activity even 
 ### Onboarding
 
 <p align="center">
-  <img width="718" height="1599" alt="WhatsApp Image 2026-10-07 at 2 56 43 AM (4)" src="https://github.com/user-attachments/assets/434744cc-f43b-4485-8192-596d94f95619" />
-<img width="718" height="1599" alt="WhatsApp Image 2026-10-07 at 2 56 43 AM (3)" src="https://github.com/user-attachments/assets/f49173c5-b495-406c-9b2e-f500bca0f064" />
-<img width="718" height="1599" alt="WhatsApp Image 2026-10-07 at 2 56 43 AM (2)" src="https://github.com/user-attachments/assets/c76ef3e5-90e9-4450-8464-5dc61169b44c" />
-<img width="718" height="1599" alt="WhatsApp Image 2026-10-07 at 2 56 43 AM (1)" src="https://github.com/user-attachments/assets/dc61f10b-b758-45ce-8b57-71170c394c5a" />
-
+  <img src="https://github.com/user-attachments/assets/434744cc-f43b-4485-8192-596d94f95619" width="200"/>
+  <img src="https://github.com/user-attachments/assets/f49173c5-b495-406c-9b2e-f500bca0f064" width="200"/>
+  <img src="https://github.com/user-attachments/assets/c76ef3e5-90e9-4450-8464-5dc61169b44c" width="200"/>
+  <img src="https://github.com/user-attachments/assets/dc61f10b-b758-45ce-8b57-71170c394c5a" width="200"/>
 </p>
 
 ### Home
 
 <p align="center">
-  <img width="718" height="1599" alt="WhatsApp Image 2026-10-07 at 2 56 43 AM" src="https://github.com/user-attachments/assets/9843e327-ff2d-4905-be47-ed794c8b632c" />
-
+  <img src="https://github.com/user-attachments/assets/9843e327-ff2d-4905-be47-ed794c8b632c" width="200"/>
 </p>
-
 
 ### Hadith
 
 <p align="center">
-  <img width="718" height="1599" alt="WhatsApp Image 2026-10-07 at 2 56 42 AM (3)" src="https://github.com/user-attachments/assets/c566f000-103f-45ec-9c36-52056cbb0845" />
-<img width="718" height="1599" alt="WhatsApp Image 2026-10-07 at 2 56 42 AM (2)" src="https://github.com/user-attachments/assets/3931d0d7-ffec-4b2f-8da7-00716ce5e116" />
-
+  <img src="https://github.com/user-attachments/assets/c566f000-103f-45ec-9c36-52056cbb0845" width="200"/>
+  <img src="https://github.com/user-attachments/assets/3931d0d7-ffec-4b2f-8da7-00716ce5e116" width="200"/>
 </p>
 
 ### Sebha
 
 <p align="center">
-  <img width="718" height="1599" alt="WhatsApp Image 2026-10-07 at 2 56 42 AM (1)" src="https://github.com/user-attachments/assets/8fd94a24-7ce9-4752-98f6-d9be58aaf22a" />
-
+  <img src="https://github.com/user-attachments/assets/8fd94a24-7ce9-4752-98f6-d9be58aaf22a" width="200"/>
 </p>
 
 ### Prayer Times
 
 <p align="center">
-  <img width="718" height="1599" alt="WhatsApp Image 2026-10-07 at 2 56 42 AM" src="https://github.com/user-attachments/assets/3967da7a-6d70-4a78-a884-9b616e294f7b" />
-
+  <img src="https://github.com/user-attachments/assets/3967da7a-6d70-4a78-a884-9b616e294f7b" width="200"/>
 </p>
 
 ---
 
+## Installation
 
+### Clone the Repository
+
+```bash
+git clone https://github.com/your-username/islami-app.git
+```
+
+### Install Dependencies
+
+```bash
+flutter pub get
+```
+
+### Run the Application
+
+```bash
+flutter run
+```
+
+---
+
+## Future Improvements
+
+* Add Quran audio recitation
+* Add Tafsir
+* Add bookmarks
+* Add daily Azkar
+* Add Qibla direction
+* Add prayer notifications
+* Improve Radio functionality
+* Add more Islamic content
+
+---
 
 ## Built With
 
@@ -152,4 +176,4 @@ Flutter & Dart ❤️
 
 ## License
 
-This project was developed for educational purposes as part of learning Flutter and mobile application development
+This project was developed for educational purposes as part of learning Flutter and mobile application development.
